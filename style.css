@@ -1,8 +1,10 @@
 body {
-  margin: 0;
   background: url(./assets/Group\ 29.jpg) no-repeat center center fixed;
   background-size: cover;
+  margin: 0;
   padding: 0;
+  word-wrap: break-word;
+  overflow-x: hidden;
 }
 
 body * {
@@ -105,7 +107,6 @@ li {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  border: 10px;
 }
 
 #formacao {
@@ -181,7 +182,7 @@ li {
 #card1,
 #card-experience,
 #linguagens-box,
-#social-box,
+#-box,
 #projetos-box {
   min-width: 250px;
 }
@@ -269,6 +270,57 @@ li {
   }
 }
 
+@media (max-width: 768px) {
+  #card-experience {
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .experiencia-item {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .experiencia-item ion-icon {
+    font-size: 28px;
+  }
+
+  #container-top {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  #about-me,
+  #card,
+  #linguagens-box {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .duas-colunas {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #social-box,
+  #projetos-box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #social-list li {
+    width: 100%;
+  }
+
+  #projetos-box li {
+    width: 100%;
+  }
+}
+
 #social-box,
 #projetos-box {
   width: 280px;
@@ -337,7 +389,6 @@ li {
   font-size: 20px;
   color: #00ff80;
 }
-
 
 ion-icon {
   color: #00ff80;
@@ -537,7 +588,8 @@ ion-icon {
   border-radius: 10px;
   padding: 12px;
   margin: 20px auto;
-  width: 930px;
+  width: 100%;
+  max-width: 930px;
   gap: 16px;
   background-color: #00ff8007;
 }

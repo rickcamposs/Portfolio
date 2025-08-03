@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* body {
+  background: url(./assets/Group\ 29.jpg) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+body * {
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+} */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  border: solid red 2px;
+  max-width: 1057px;
+}
+
+
+.card {
+  border: 3px solid black; /*  alterar a cor para ver após terminar #00ff00 */
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+}
+
+/*Card 1 Foto, Nome, Progresso e Faculdade*/
+
+.foto {
+  width: 333px;
+  text-align: center;
+}
+
+.nome {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  font-size: 16px;
+  width: 50%;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.descricao {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: black;
+  text-align: center;
+  margin: 5px;
+}
+
+#progress-bar {
+  margin: 0 auto;
+  width: 200px;
+  height: 20px;
+  border: 3px solid #11bb02bb;
+  border-radius: 10px;
+  background-color: transparent; /* position: relative; */
+  overflow: hidden;
+  padding: 3px;
+  margin: 3px auto;
+}
+
+#progress {
+  height: 100%;
+  background-color: #00ff00;
+  border-radius: 8px 3px 3px 8px;
+
+}
+
+.faculdade {
+  font-size: 0.7rem;
+  color: black; /* alterar a cor para ver após terminar #white */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.verde {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+/* Fim Card 1 Foto, Nome, Progresso e Faculdade*/
+
+/*Card 2 SOBRE MIM*/
+
+.sobre {
+  width: 333px;
+  text-align: center;
+  margin: 0;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 12px;
+  background-color: transparent;
+  color: black; /* alterar a cor para ver após terminar #00ff00 */
+}
+
+
+p.sobre {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: red; /* alterar a cor para ver após terminar white */
+  text-align: justify;
+  line-height: 1.4;
+}
+
+/* Fim Card 2 SOBRE MIM*/
+
+/*Card 3 LINGUAGENS*/
+
+.linguagens {
+  width: 283px;
+  text-align: center;
+  margin: 0;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 12px;
+  background-color: transparent;
+  color: black; /* alterar a cor para ver após terminar #00ff00 */
+}
+
+.linguagens ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.linguagens li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: 80%;
+  transition: transform 0.03s, ease-in-out;
+}
+
+.linguagens ion-icon {
+  color: #00ff00;
+  font-size: 18px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.linguagens li ion-icon {
+  position: absolute;
+  left: 65px;
+}
+
+.linguagens ul li:hover {
+  color: #00ff00;
+  transform: scale(1.05);
+}
+
+
+.no-copy {
+  user-select: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  -o-user-select: none;
+  /* Opera */
+}
+
+/* Fim Card 3 LINGUAGENS*/
+
+/*Card 4 CONTATO*/
+
+.contato {
+  width: 707px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 15px;
+  background-color: transparent;
+  color: black; /* alterar a cor para ver após terminar #00ff00 */
+
+}
+
+.contato .contato-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
+.link-container {
+  background-color: #000;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  min-width: 290px;
+  transition: border 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Efeito hover quando passar na caixa toda */
+.link-container:hover {
+  border: 1.5px solid #1ec51e;
+  transform: scale(1.05);
+}
+
+/* Estilo do link (sem pointer) */
+.link-container a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  text-decoration: none;
+  pointer-events: none; /* Desativa clique geral */
+}
+
+/* Ícone */
+.link-container ion-icon {
+  color: #00ff00;
+  font-size: 18px;
+}
+
+/* Texto do link — apenas aqui é clicável */
+.link-container .texto-link {
+  pointer-events: auto;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+.link-container .texto-link:hover {
+  color: #00ff00;
+}
+
+
+.contato a .texto-link {
+  color: white;
+  pointer-events: auto; /* Reativa clique só no texto */
+  transition: color 0.2s ease-in-out;
+}
+
+.contato a .texto-link:hover {
+  color: #00ff00;
+}
+
+.contato ion-icon {
+  color: #00ff00;
+  font-size: 18px;
+}
+
+
+
+/* Fim Card 4 CONTATO*/
+
+.projetos {
+  width: 283px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experiencia {
+  width: 1057px;
+}
+
+.aaaa {
+  /* padding: 10px; */
+}
+
+h2 {
+  margin: 25px;
+}
+
+a{
+  color: white; /* Substituir por White*/
+}
