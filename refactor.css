@@ -190,6 +190,8 @@ p.sobre {
   color: white;
   text-align: justify;
   line-height: 1.4;
+  background-color: inherit;
+
 }
 
 /* Fim Card 2 SOBRE MIM*/
@@ -202,10 +204,8 @@ p.sobre {
   margin: 0;
   font-family: 'Archivo Black', sans-serif;
   font-size: 12px;
-  background-color: transparent;
+  background-color: #00ff8007;
   color: #00ff00;
-
-    background-color: #00ff8007;
 }
 
 .linguagens ul {
@@ -216,6 +216,8 @@ p.sobre {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+
+  background-color: inherit;
 }
 
 .linguagens li {
@@ -224,7 +226,7 @@ p.sobre {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 14px;
+  font-size: 17px;
   background-color: black;
   color: white;
   padding: 8px 12px;
@@ -273,11 +275,10 @@ p.sobre {
   text-align: center;
   margin: 0;
   font-family: 'Archivo Black', sans-serif;
-  font-size: 15px;
   background-color: transparent;
   color: black;
 
-    background-color: #00ff8007;
+  background-color: #00ff8007;
 }
 
 .contato .contato-grid{
@@ -285,6 +286,10 @@ p.sobre {
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   justify-items: center;
+}
+
+.contato h2 {
+  margin: 35px;
 }
 
 .link-container {
@@ -297,12 +302,11 @@ p.sobre {
   gap: 8px;
   justify-content: center;
   min-width: 290px;
-  transition: transform 0.03s, ease-in-out;
 }
 
 .link-container:hover {
   border: 1.5px solid #1ec51e;
-  transform: scale(1.05);
+  transform: scale(1.07);
 }
 
 .link-container a {
@@ -310,7 +314,7 @@ p.sobre {
   align-items: center;
   gap: 8px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 100;
   text-decoration: none;
   pointer-events: none; 
@@ -335,16 +339,6 @@ p.sobre {
 .contato a .texto-link {
   color: white;
   pointer-events: auto;
-  transition: color 0.2s ease-in-out;
-}
-
-.contato a .texto-link:hover {
-  color: #00ff00;
-}
-
-.contato ion-icon {
-  color: #00ff00;
-  font-size: 18px;
 }
 
 /* Fim Card 4 CONTATO*/
@@ -386,7 +380,7 @@ p.sobre {
   text-decoration: none;
   color: #000;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -411,7 +405,6 @@ p.sobre {
   justify-content: center;
   min-width: 200px;
   color: white;
-  transition: border 0.2s ease-in-out, transform 0.2s ease-in-out;
   gap: 8px;
 }
 
@@ -426,10 +419,6 @@ p.sobre {
 }
 
 .projetos a .links-projetos:hover {
-  color: #00ff00;
-}
-
-.projetos a .links-projetos:hover {
     color: #00ff00;
     border: 1.5px solid #1ec51e;
     transform: scale(1.05);
@@ -437,6 +426,7 @@ p.sobre {
 
 .projetos li:hover span {
   color: #00ff00;
+  transition: color 0.2s ease-in-out;
 }
 
 .projetos ul li a:hover {
@@ -453,7 +443,7 @@ p.sobre {
   flex-direction: column;
   text-align: center;
   margin: auto;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   background-color: transparent;
   color: black; /* alterar a cor para ver após terminar #00ff00 */
@@ -462,6 +452,10 @@ p.sobre {
 }
 
 .experiencia h2 {
+  font-family: 'Archivo Black', sans-serif;
+  background: radial-gradient(circle, #00ff80, #11c401c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 2px;
 }
 
@@ -522,6 +516,13 @@ p.sobre {
 }
 
 /* Fim Card 6 Experiência*/
+
+footer {
+  color: white;
+  font-family: "Montserrat" sans-serif;
+  font-size: 10px;
+  margin-top: 10px;
+}
 
 h2 {
   margin: 25px;
