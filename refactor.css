@@ -77,6 +77,32 @@ main {
   color: black;
   text-align: center;
   margin: 5px;
+
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+
+  border-right: 2px solid #00ff00;
+  animation:
+    digita 3.7s steps(26) forwards,
+    cursor 0.7s steps(1) infinite;
+}
+
+@keyframes digita {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 20ch;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
 }
 
 #progress-bar {
@@ -95,7 +121,17 @@ main {
   height: 100%;
   background-color: #00ff00;
   border-radius: 8px 3px 3px 8px;
+  animation: loading 3.5s ease-in-out forwards;
+}
 
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 60%;
+  }
 }
 
 .faculdade {
@@ -105,6 +141,20 @@ main {
   text-align: center;
   margin-top: 0.5rem;
   line-height: 1.4;
+  animation: surgir 4s ease-out 0.2s forwards;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }
 
 .verde {
@@ -237,16 +287,14 @@ p.sobre {
   gap: 8px;
   justify-content: center;
   min-width: 290px;
-  transition: border 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: transform 0.03s, ease-in-out;
 }
 
-/* Efeito hover quando passar na caixa toda */
 .link-container:hover {
   border: 1.5px solid #1ec51e;
   transform: scale(1.05);
 }
 
-/* Estilo do link (sem pointer) */
 .link-container a {
   display: flex;
   align-items: center;
@@ -255,16 +303,14 @@ p.sobre {
   font-size: 15px;
   font-weight: 100;
   text-decoration: none;
-  pointer-events: none; /* Desativa clique geral */
+  pointer-events: none; 
 }
 
-/* Ícone */
 .link-container ion-icon {
   color: #00ff00;
   font-size: 18px;
 }
 
-/* Texto do link — apenas aqui é clicável */
 .link-container .texto-link {
   pointer-events: auto;
   color: white;
@@ -278,7 +324,7 @@ p.sobre {
 
 .contato a .texto-link {
   color: white;
-  pointer-events: auto; /* Reativa clique só no texto */
+  pointer-events: auto;
   transition: color 0.2s ease-in-out;
 }
 
@@ -291,23 +337,169 @@ p.sobre {
   font-size: 18px;
 }
 
-
-
 /* Fim Card 4 CONTATO*/
+
+/* Card 5 Projetos*/
 
 .projetos {
   width: 283px;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin: 0;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 15px;
+  background-color: transparent;
 }
+
+.projetos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.projetos li {
+  color: #000;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.projetos a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.projetos a span {
+  color: white;
+}
+
+.links-projetos {
+  background-color: #000;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  color: white;
+  transition: border 0.2s ease-in-out, transform 0.2s ease-in-out;
+  gap: 8px;
+}
+
+.projetos ion-icon {
+  color: #00ff00;
+  font-size: 18px;
+}
+.projetos a .links-projetos {
+  color: white;
+  pointer-events: auto;
+  transition: color 0.2s ease-in-out;
+}
+
+.projetos a .links-projetos:hover {
+  color: #00ff00;
+}
+
+.projetos a .links-projetos:hover {
+    color: #00ff00;
+    border: 1.5px solid #1ec51e;
+    transform: scale(1.05);
+}
+
+.projetos li:hover span {
+  color: #00ff00;
+}
+
+.projetos ul li a:hover {
+  color: #00ff00;
+} 
+
+/* Fim Card 5 Projetos*/
+
+/* Card 6 Experiência*/
 
 .experiencia {
   width: 1057px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 15px;
+  background-color: transparent;
+  color: black; /* alterar a cor para ver após terminar #00ff00 */
 }
 
-.aaaa {
-  /* padding: 10px; */
+.experiencia a {
+  color: #000;
+  text-decoration: none;
 }
+
+.experiencia ion-icon {
+  color: #00ff00;
+  display: inline-block;
+}
+
+.experiencia-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  color: black;
+}
+
+.experiencia-item ion-icon {
+  font-size: 24px;
+  color: #00ff80;
+  vertical-align: middle;
+}
+
+.experiencia ion-icon {
+  display: inline-block;
+  animation: balancar 1s ease-in-out infinite;
+}
+
+@keyframes balancar {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(7deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-7deg);
+  }
+
+  100% {
+    transform: rotate(8deg);
+  }
+}
+
+/* Fim Card 6 Experiência*/
 
 h2 {
   margin: 25px;
