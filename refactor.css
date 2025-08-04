@@ -31,7 +31,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  margin-top: 20px;
   flex-direction: column;
   gap: 15px;
 }
@@ -46,10 +47,11 @@ main {
 
 
 .card {
-  border: 3px solid rgb(0, 255, 0); /*  alterar a cor para ver após terminar #00ff00 */
+  border: 3px solid rgb(0, 255, 0);
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  /* width: 100%; */
 
   background-color: #00ff8007;
 }
@@ -116,7 +118,7 @@ main {
   height: 20px;
   border: 3px solid #11bb02bb;
   border-radius: 10px;
-  background-color: transparent; /* position: relative; */
+  background-color: transparent;
   overflow: hidden;
   padding: 3px;
   margin: 3px auto;
@@ -201,11 +203,9 @@ p.sobre {
 .linguagens {
   width: 283px;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Archivo Black', sans-serif;
   font-size: 12px;
-  background-color: #00ff8007;
-  color: #00ff00;
 }
 
 .linguagens ul {
@@ -216,6 +216,7 @@ p.sobre {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  width: 100%;
 
   background-color: inherit;
 }
@@ -233,10 +234,12 @@ p.sobre {
   border-radius: 6px;
   width: 80%;
   transition: transform 0.03s, ease-in-out;
+
+  margin: 5px auto;
 }
 
 .linguagens ion-icon {
-  color: #00ff00;
+  color: #00ff80;
   font-size: 18px;
   vertical-align: middle;
   display: inline-block;
@@ -321,7 +324,7 @@ p.sobre {
 }
 
 .link-container ion-icon {
-  color: #00ff00;
+  color: #00ff80;
   font-size: 18px;
 }
 
@@ -374,6 +377,7 @@ p.sobre {
   display: block;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .projetos a {
@@ -409,7 +413,7 @@ p.sobre {
 }
 
 .projetos ion-icon {
-  color: #00ff00;
+  color: #00ff80;
   font-size: 18px;
 }
 .projetos a .links-projetos {
@@ -465,7 +469,7 @@ p.sobre {
 }
 
 .experiencia ion-icon {
-  color: #00ff00;
+  color: #00ff80;
   display: inline-block;
 }
 
@@ -490,7 +494,7 @@ p.sobre {
 }
 
 .experiencia a:hover{
-  color: #00ff00;
+  color: #00ff80;
 }
 
 @keyframes balancar {
@@ -519,9 +523,11 @@ p.sobre {
 
 footer {
   color: white;
-  font-family: "Montserrat" sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Corrigi as aspas aqui */
   font-size: 10px;
-  margin-top: 10px;
+  text-align: center; /* Adicionado para centralizar o texto */
+  padding: 20px; /* Adicionado para dar um respiro */
+  margin-top: 1px;
 }
 
 h2 {
