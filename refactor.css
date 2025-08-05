@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
+/* body {
   background: url(./assets/Group\ 29.jpg) no-repeat center center fixed;
   background-size: cover;
   margin: 0;
@@ -25,66 +25,163 @@ body::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
+} */
+
+:root {
+  --container-gap: 15px;
+  --card-border: 3px;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin-top: 20px;
+  height: 100vh;
   flex-direction: column;
   gap: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  color: black; /*alterar para white */
+}
+
+ion-icon {
+  color: #00ff80;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  gap: 8px;
+}
+
+a:hover {
+  color: #00ff00;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  /* border: solid red 2px; */
-  max-width: 1057px;
+  border: solid red 2px;
+  width: 80%;
+  justify-content: center;
+  gap: var(--container-gap);
 }
 
-
 .card {
-  border: 3px solid rgb(0, 255, 0);
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  /* width: 100%; */
-
+  border: var(--card-border) solid black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  padding-block: 5px;
+ /* padding: 10px; posso adicionar o padding no card mas tenho que considerar a conta no calc
+ 2 *número de cards * tamanho do padding*/
   background-color: #00ff8007;
 }
 
-/*Card 1 Foto, Nome, Progresso e Faculdade*/
-
-.foto {
-  width: 333px;
-  text-align: center;
-}
-
-.nome {
+.text-name {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   background: radial-gradient(circle, #00ff80, #11c401c5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
   text-align: center;
-  font-size: 16px;
-  width: 50%;
-  align-items: center;
-  margin: 0 auto;
 }
 
-.descricao {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  color: white;
+.text-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 20px;
+  background: radial-gradient(circle, #00ff80, #11c401c5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
-  margin: 5px;
+  margin: 10px 0 10px 0;
+}
 
+.text-bold {
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.text-about {
+  text-align: justify;
+  margin: 15px;
+  color: black; /*alterar para white*/
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 12px 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+
+  border: 1px solid black;
+}
+
+.button:hover{
+  transform: scale(1.05);
+  color: #00ff80;
+  border-color: #00ff00;
+  transition: all 0.1s ease-in-out;
+}
+
+.no-copy {
+  user-select: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  -o-user-select: none;
+  /* Opera */
+}
+
+.photo {
+  height: 200px;
+  width: 200px;
+}
+
+#progress-bar {
+  margin: 0 auto;
+  width: 200px;
+  height: 20px;
+  border: 3px solid #11bb02bb;
+  border-radius: 10px;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 3px;
+  margin: 3px auto;
+}
+
+#progress {
+  height: 100%;
+  width: 60%;
+  background-color: #00ff00;
+  border-radius: 8px 3px 3px 8px;
+  animation: loading 3.5s ease-in-out forwards;
+}
+
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 60%;
+  }
+}
+
+.position {
   width: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -112,46 +209,11 @@ main {
   }
 }
 
-#progress-bar {
-  margin: 0 auto;
-  width: 200px;
-  height: 20px;
-  border: 3px solid #11bb02bb;
-  border-radius: 10px;
-  background-color: transparent;
-  overflow: hidden;
-  padding: 3px;
-  margin: 3px auto;
+.to-emerge {
+  animation: emerge 4s ease-out 0.2s forwards; ;
 }
 
-#progress {
-  height: 100%;
-  background-color: #00ff00;
-  border-radius: 8px 3px 3px 8px;
-  animation: loading 3.5s ease-in-out forwards;
-}
-
-@keyframes loading {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 60%;
-  }
-}
-
-.faculdade {
-  font-size: 0.7rem;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 0.5rem;
-  line-height: 1.4;
-  animation: surgir 4s ease-out 0.2s forwards;
-}
-
-@keyframes surgir {
+@keyframes emerge {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -164,381 +226,56 @@ main {
 
 }
 
-.verde {
+.green {
   color: #00ff00;
   font-weight: bold;
 }
 
-/* Fim Card 1 Foto, Nome, Progresso e Faculdade*/
-
-/*Card 2 SOBRE MIM*/
-
-.sobre {
-  width: 333px;
-  text-align: center;
-  margin: 0;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 12px;
-  background-color: transparent;
-  color: #00ff00;
-
-  background-color: #00ff8007;
+.profile{
+  width: 30%;
 }
 
-
-p.sobre {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  color: white;
-  text-align: justify;
-  line-height: 1.4;
-  background-color: inherit;
-
+.about {
+  width: 30%;
 }
 
-/* Fim Card 2 SOBRE MIM*/
-
-/*Card 3 LINGUAGENS*/
-
-.linguagens {
-  width: 283px;
-  text-align: center;
-  margin: 0 auto;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 12px;
+.language {
+  width: 30%;
 }
 
-.linguagens ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  width: 100%;
-
-  background-color: inherit;
+.button.language {
+  flex-direction: row;
+  width: 220px;
 }
 
-.linguagens li {
-  font-family: 'Montserrat', sans-serif;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  font-size: 17px;
-  background-color: black;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  width: 80%;
-  transition: transform 0.03s, ease-in-out;
-
-  margin: 5px auto;
+.button.language:hover {
+  border-color: black;
 }
-
-.linguagens ion-icon {
-  color: #00ff80;
-  font-size: 18px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.linguagens li ion-icon {
-  position: absolute;
-  left: 65px;
-}
-
-.linguagens ul li:hover {
-  color: #00ff00;
-  transform: scale(1.05);
-}
-
-.no-copy {
-  user-select: none;
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE/Edge */
-  -o-user-select: none;
-  /* Opera */
-}
-
-/* Fim Card 3 LINGUAGENS*/
-
-/*Card 4 CONTATO*/
 
 .contato {
-  width: 707px;
+  width: calc(60% + var(--container-gap) + var(--card-border ) * 2);
+}
+
+.contato section {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 0;
-  font-family: 'Archivo Black', sans-serif;
-  background-color: transparent;
-  color: black;
-
-  background-color: #00ff8007;
-}
-
-.contato .contato-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  justify-items: center;
-}
-
-.contato h2 {
-  margin: 35px;
-}
-
-.link-container {
-  background-color: #000;
-  border-radius: 12px;
-  border: 1.5px solid transparent;
-  padding: 20px 25px;
-  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
   align-items: center;
-  gap: 8px;
   justify-content: center;
-  min-width: 290px;
+  gap: 10px;
+  margin-bottom: 5px;
 }
 
-.link-container:hover {
-  border: 1.5px solid #1ec51e;
-  transform: scale(1.07);
+.contato .button {
+  width: 40%;
+  height: 40px;
+  margin: 0;
 }
-
-.link-container a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
-  font-weight: 100;
-  text-decoration: none;
-  pointer-events: none; 
-}
-
-.link-container ion-icon {
-  color: #00ff80;
-  font-size: 18px;
-}
-
-.link-container .texto-link {
-  pointer-events: auto;
-  color: white;
-  transition: color 0.2s ease-in-out;
-}
-
-.link-container .texto-link:hover {
-  color: #00ff00;
-}
-
-
-.contato a .texto-link {
-  color: white;
-  pointer-events: auto;
-}
-
-/* Fim Card 4 CONTATO*/
-
-/* Card 5 Projetos*/
 
 .projetos {
-  width: 283px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 0;
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 15px;
-  background-color: transparent;
-
-  background-color: #00ff8007;
+  width: 30%;
 }
 
-.projetos ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-.projetos li {
-  color: #000;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.projetos a {
-  text-decoration: none;
-  color: #000;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  justify-content: center;
-
-  pointer-events: none;
-}
-
-.projetos a span {
-  color: white;
-}
-
-.links-projetos {
-  background-color: #000;
-  border-radius: 12px;
-  border: 1.5px solid transparent;
-  padding: 20px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 200px;
-  color: white;
-  gap: 8px;
-}
-
-.projetos ion-icon {
-  color: #00ff80;
-  font-size: 18px;
-}
-.projetos a .links-projetos {
-  color: white;
-  pointer-events: auto;
-  transition: color 0.2s ease-in-out;
-}
-
-.projetos a .links-projetos:hover {
-    color: #00ff00;
-    border: 1.5px solid #1ec51e;
-    transform: scale(1.05);
-}
-
-.projetos li:hover span {
-  color: #00ff00;
-  transition: color 0.2s ease-in-out;
-}
-
-.projetos ul li a:hover {
-  color: #00ff00;
-} 
-
-/* Fim Card 5 Projetos*/
-
-/* Card 6 Experiência*/
-
-.experiencia {
-  width: 1057px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: auto;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-  background-color: transparent;
-  color: black; /* alterar a cor para ver após terminar #00ff00 */
-
-  background-color: #00ff8007;
-}
-
-.experiencia h2 {
-  font-family: 'Archivo Black', sans-serif;
-  background: radial-gradient(circle, #00ff80, #11c401c5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 2px;
-}
-
-.experiencia a {
-  color: white;
-  text-decoration: none;
-}
-
-.experiencia ion-icon {
-  color: #00ff80;
-  display: inline-block;
-}
-
-.experiencia-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 8px;
-  color: white;
-}
-
-.experiencia-item ion-icon {
-  font-size: 24px;
-  color: #00ff80;
-  vertical-align: middle;
-}
-
-.experiencia ion-icon {
-  display: inline-block;
-  animation: balancar 1s ease-in-out infinite;
-}
-
-.experiencia a:hover{
-  color: #00ff80;
-}
-
-@keyframes balancar {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  25% {
-    transform: rotate(7deg);
-  }
-
-  50% {
-    transform: rotate(0deg);
-  }
-
-  75% {
-    transform: rotate(-7deg);
-  }
-
-  100% {
-    transform: rotate(8deg);
-  }
-}
-
-/* Fim Card 6 Experiência*/
-
-footer {
-  color: white;
-  font-family: 'Montserrat', sans-serif; /* Corrigi as aspas aqui */
-  font-size: 10px;
-  text-align: center; /* Adicionado para centralizar o texto */
-  padding: 20px; /* Adicionado para dar um respiro */
-  margin-top: 1px;
-}
-
-h2 {
-  margin: 25px;
-  background: radial-gradient(circle, #00ff80, #11c401c5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
-a{
-  color: white; /* Substituir por White*/
+.experiencia{
+  width: calc(90% + calc(var(--container-gap) * 2) + var(--card-border) * 4); 
 }

@@ -5,146 +5,165 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-COMPATIBLE" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="refactor.css">
-    <!-- <link rel="stylesheet"  href="style_responsivo.css"> -->
 </head>
 
 <body>
     <main>
         <div class="container">
-            <div class="card foto">
-                <img src="./assets/Group 1.png" alt="Foto de Riquelme, sorrindo, com óculos de sol, em uma lagoa">
-                <div class="nome">
+            <div class="card profile">
+                <img class="photo" src="./assets/Group 1.png" alt="Foto de Riquelme, sorrindo, com óculos de sol, em uma lagoa">
+                <div class="text-name">
                     Riquelme Campos
                 </div>
-                <div class="descricao">Desenvolvedor <span class="verde">FullStack</span></div>
-                <div id="progress-bar">
-                    <div id="progress" style="width: 60%;"></div>
+                <div class="position">
+                    Desenvolvedor
+                    <span class="green">
+                        FullStack
+                    </span>
                 </div>
-                <div class="faculdade">
-                    Sistemas de Informação<br>
-                    <span class="periodo">Março 2023 – Dezembro 2027</span>
+                <div id="progress-bar">
+                    <div id="progress">
+                    </div>
+                </div>
+                <div class="to-emerge">
+                    Sistemas de Informação <br>
+                    <span class="text-bold">
+                        Março 2023 – Dezembro 2027
+                    </span>
                 </div>
             </div>
+            <div class="card about">
+                <div class="text-title">
+                    SOBRE MIM
+                </div>
+                <span class="text-about">
+                    Atualmente, curso Sistemas de Informação pela
 
-            <div class="card sobre">
-                <h2>SOBRE MIM</h2>
-                <span>
-                    <p class="sobre">
-                        Atualmente, curso Sistemas de Informação pela
+                    <span class="green">
+                        Universidade Federal dos Vales Jequitinhonha e Mucuri
+                    </span>
+                        (UFVJM) onde venho aprofundando meus conhecimentos em desenvolvimento de software, banco de dados, infraestrutura e soluções web. 
+                        Sou formado como
 
-                        <span class="verde">Universidade Federal dos Vales Jequitinhonha e Mucuri</span>
-
-                        (UFVJM) e sou formado como
-
-                        <span class="verde">Técnico em Informática</span>
-
+                    <span class="green">
+                        Técnico em Informática
+                    </span>
                         pelo Instituto Federal do Norte de Minas Gerais
-
-                        <span class="verde">(IFNMG)</span>.
-
-                        Atualmente estou alimentando minha sede por conhecimento, focando em projetos de autoria
-                        própria,
-                        sempre
-                        em busca de aprimorar minhas habilidades.
-                    </p>
+                    <span class="green">
+                        (IFNMG)
+                    </span>.
+                        formação que me proporcionou uma base sólida em lógica de programação, redes e manutenção de computadores. Tenho uma forte paixão 
+                        por 
+                    <span class="green">
+                            tecnologia 
+                    </span>
+                        e estou constantemente em busca de novos aprendizados. Atualmente foco no 
+                    <span class="green">
+                        desenvolvimento de projetos autorais,
+                    </span>
                 </span>
             </div>
-
-            <div class="card linguagens">
-                <h2>LINGUAGENS</h2>
-                <section class="linguagens">
-                    <ul>
-                        <li class="no-copy"><ion-icon name="logo-html5">
-                            </ion-icon> HTML
-                        </li>
-                        <li class="no-copy"><ion-icon name="logo-css3">
-                            </ion-icon> CSS
-                        </li>
-                        <li class="no-copy"><ion-icon name="cafe-outline">
-                            </ion-icon> Java
-                        </li>
-                        <li class="no-copy"><ion-icon name="logo-python">
-                            </ion-icon> Python
-                        </li>
-                        <li class="no-copy"><ion-icon name="copy-outline">
-                            </ion-icon> SQL
-                        </li>
-                    </ul>
+            <div class="card language">
+                <div class="text-title">
+                    LINGUAGENS
+                </div>
+                <section>
+                    <div>
+                        <div class="no-copy button language">
+                            <ion-icon name="logo-html5">
+                            </ion-icon> 
+                            <span>
+                                HTML
+                            </span>
+                        </div>
+                        <div class="no-copy button language">
+                            <ion-icon name="logo-css3">
+                            </ion-icon> 
+                            <span>
+                                CSS
+                            </span>
+                        </div>
+                        <div class="no-copy button language">
+                            <ion-icon name="cafe-outline">
+                            </ion-icon> 
+                            <span>
+                                Python
+                            </span>
+                        </div>
+                        <div class="no-copy button language">
+                            <ion-icon name="logo-python">
+                            </ion-icon> 
+                            <span>
+                                Java
+                            </span>
+                        </div>
+                        <div class="no-copy button language">
+                            <ion-icon name="copy-outline">
+                            </ion-icon> 
+                            <span>
+                                SQL
+                            </span>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
         <div class="container">
             <div class="card contato">
-                <h2>CONTATO</h2>
-                <section class="contato-grid">
-                    <div class="link-container">
-                        <a href="https://www.linkedin.com/in/riquelme-campos-3851a3278/" target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon> <span class="texto-link">LinkedIn</span>
-                        </a>
-                    </div>
-                    <div class="link-container">
-                        <a href="https://github.com/rickcamposs" target="_blank">
-                            <ion-icon name="logo-github"></ion-icon> <span class="texto-link">GitHub</span>
-                        </a>
-                    </div>
-                    <div class="link-container">
-                        <a href="mailto:riquelmemoreiracampos@gmail.com" target="_blank">
-                            <ion-icon name="mail-outline"></ion-icon> <span class="texto-link">E-mail</span>
-                        </a>
-                    </div>
-                    <div class="link-container">
-                        <a href="https://www.instagram.com/rick_camposs_/" target="_blank">
-                            <ion-icon name="logo-instagram"></ion-icon> <span class="texto-link">Instagram</span>
-                        </a>
-                    </div>
+                <div class="text-title">
+                    CONTATO
+                </div>
+                <section>
+                        <div class="no-copy button contato">
+                            <a href="https://www.linkedin.com/in/riquelme-campos-3851a3278/" target="_blank">
+                                <ion-icon name="logo-linkedin">
+                                </ion-icon>
+                                    <span>
+                                        LinkedIn
+                                    </span>
+                            </a>
+                        </div>
+                        <div class="no-copy button contato">
+                            <a href="https://github.com/rickcamposs" target="_blank">
+                                <ion-icon name="logo-github">
+                                </ion-icon>
+                                <span>
+                                    GitHub
+                                </span>
+                            </a>
+                        </div>
+                        <div class="no-copy button contato">
+                            <a href="mailto:riquelmemoreiracampos@gmail.com" target="_blank" target="_blank">
+                                <ion-icon name="mail-outline">
+                                </ion-icon>
+                                <span>
+                                    Email
+                                </span>
+                            </a>
+                        </div>
+                        <div class="no-copy button contato">
+                            <a href="https://www.instagram.com/rick_camposs_/" target="_blank">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                                <span>
+                                    instagram
+                                </span>
+                            </a>
+                        </div>
                 </section>
             </div>
             <div class="card projetos">
-                <h2>PROJETOS</h2>
-                <ul>
-                    <li>
-                        <a href="https://github.com/rickcamposs/SistemaOficinaPOO" target="_blank">
-                            <div class="links-projetos">
-                                <ion-icon name="construct-outline"></ion-icon>
-                                <span>Sistema Oficina Mecânica</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/rickcamposs/Portf-lio" target="_blank">
-                            <div class="links-projetos">
-                                <ion-icon name="folder-outline"></ion-icon>
-                                <span>Portfólio Base</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/rickcamposs/projeto3" target="_blank">
-                            <div class="links-projetos">
-                                <ion-icon name="image-outline"></ion-icon>
-                                <span>Photoshop Work's</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="container">
-            <div class="card experiencia">
-                <h2>Experiência</h2>
-                <div class="experiencia-item">
-                    <ion-icon name="cloud-outline"></ion-icon>
-                    <span><strong><a href="https://lp.staycloud.com.br/" target="_blank">StayCloud</a></strong> 
-                        – Suporte Técnico</span>
+                <div class="text-title">
+                    PROJETOS
                 </div>
             </div>
         </div>
-
-        <footer _ngcontent-ng-c1440224920="" class="light-text">©2025</footer>
-
+        <div class="container">
+            <div class="card experiencia">
+                experiencia
+            </div>
+        </div>
     </main>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
