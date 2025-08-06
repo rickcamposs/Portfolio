@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* body {
+body {
   background: url(./assets/Group\ 29.jpg) no-repeat center center fixed;
   background-size: cover;
   margin: 0;
@@ -25,23 +25,23 @@ body::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
-} */
+}
 
 :root {
   --container-gap: 15px;
-  --card-border: 3px;
+  --card-border: 2px;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
   gap: 15px;
   font-family: "Montserrat", sans-serif;
   font-size: 0.7rem;
-  color: black; /*alterar para white */
+  color: white; /*alterar para white */
 }
 
 ion-icon {
@@ -52,25 +52,26 @@ ion-icon {
 a {
   text-decoration: none;
   color: white;
-  align-items: center;
   gap: 8px;
+  text-align: center;
 }
 
 a:hover {
-  color: #00ff00;
+  color: #00ff80;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  border: solid red 2px;
+  /* border: solid red 2px; */
   width: 80%;
   justify-content: center;
   gap: var(--container-gap);
 }
 
 .card {
-  border: var(--card-border) solid black;
+  border: var(--card-border) solid #00ff00;
+  border-radius: 8px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -80,11 +81,13 @@ a:hover {
  /* padding: 10px; posso adicionar o padding no card mas tenho que considerar a conta no calc
  2 *número de cards * tamanho do padding*/
   background-color: #00ff8007;
+
+  overflow: hidden;
 }
 
 .text-name {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   background: radial-gradient(circle, #00ff80, #11c401c5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -108,13 +111,17 @@ a:hover {
 
 .text-about {
   text-align: justify;
+  font-size: 14px ;
   margin: 15px;
-  color: black; /*alterar para white*/
+  color: rgba(255, 255, 255, 0.952); /*alterar para white*/
+}
+
+.text-button {
+  font-size: 180px;
 }
 
 .button {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
@@ -122,16 +129,29 @@ a:hover {
   padding: 12px 12px;
   font-size: 15px;
   border-radius: 8px;
-  margin: 10px 0;
-
   border: 1px solid black;
+  position: relative;
 }
 
 .button:hover{
   transform: scale(1.05);
   color: #00ff80;
   border-color: #00ff00;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button ion-icon {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.no-absolute-icon {
+  position: unset;
+}
+
+.no-absolute-icon ion-icon {
+  position: unset;
 }
 
 .no-copy {
@@ -146,9 +166,20 @@ a:hover {
   /* Opera */
 }
 
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
 .photo {
-  height: 200px;
-  width: 200px;
+  margin-top: 10px;
+  height: 190px;
+  width: 180px;
 }
 
 #progress-bar {
@@ -166,7 +197,7 @@ a:hover {
 #progress {
   height: 100%;
   width: 60%;
-  background-color: #00ff00;
+  background-color: #00ff80;
   border-radius: 8px 3px 3px 8px;
   animation: loading 3.5s ease-in-out forwards;
 }
@@ -189,11 +220,11 @@ a:hover {
 
   border-right: 2px solid #00ff00;
   animation:
-    digita 3.7s steps(26) forwards,
-    cursor 0.7s steps(1) infinite;
+    typing 3.7s steps(26) forwards,
+    cuorses 0.7s steps(1) infinite;
 }
 
-@keyframes digita {
+@keyframes typing {
   from {
     width: 0
   }
@@ -203,7 +234,7 @@ a:hover {
   }
 }
 
-@keyframes cursor {
+@keyframes cuorses {
   50% {
     border-color: transparent;
   }
@@ -227,7 +258,7 @@ a:hover {
 }
 
 .green {
-  color: #00ff00;
+  color: #00ff80;
   font-weight: bold;
 }
 
@@ -244,8 +275,8 @@ a:hover {
 }
 
 .button.language {
-  flex-direction: row;
-  width: 220px;
+  transition: all 0.03s ease-in-out;
+  width: 80%;
 }
 
 .button.language:hover {
@@ -254,16 +285,6 @@ a:hover {
 
 .contato {
   width: calc(60% + var(--container-gap) + var(--card-border ) * 2);
-}
-
-.contato section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 5px;
 }
 
 .contato .button {
@@ -276,6 +297,151 @@ a:hover {
   width: 30%;
 }
 
+.projetos .button {
+  width: 60%;
+  height: 20px;
+  justify-content: center;
+}
+
+.projetos .button ion-icon {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  top: -5%;
+  left: -3%;
+}
+
 .experiencia{
   width: calc(90% + calc(var(--container-gap) * 2) + var(--card-border) * 4); 
+  height: 90px;
+}
+
+.experiencia ion-icon {
+  font-size: 20px;
+  justify-content: center;
+}
+
+#experience {
+  display: inline-block;
+  animation: balancar 1s ease-in-out infinite;
+}
+
+.icon-experience {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.icon-experience #experience {
+  font-size: 25px;
+  color: #00ff80;
+  animation: balancar 1s ease-in-out infinite;
+}
+
+.icon-experience .text-stay {
+  font-size: 17px;
+  color: white;
+}
+
+.icon-experience .text-stay:hover{
+  color: #00ff80;
+}
+
+.icon-experience .text-width{
+  font-size: 17px;
+}
+
+@keyframes balancar {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  25% {
+    transform: rotate(7deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-7deg);
+  }
+
+  100% {
+    transform: rotate(8deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  main {
+    margin-top: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card {
+    width: 90% !important;
+  }
+
+  .profile,
+  .about,
+  .language,
+  .contato,
+  .projetos,
+  .experiencia {
+    width: 90% !important;
+  }
+
+  .section {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .button {
+    width: 80% !important;
+    font-size: 14px;
+  }
+
+  .contato .button {
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  ion-icon {
+    font-size: 18px;
+  }
+  
+  .no-absolute-icon {
+    position: relative;
+  }
+  
+  .no-absolute-icon ion-icon {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+  }
+
+  .text-title,
+  .text-name {
+    font-size: 18px;
+  }
+
+  .text-about,
+  .text-stay {
+    font-size: 13px;
+  }
+
+  .photo {
+    width: 120px;
+    height: 130px;
+  }
 }
